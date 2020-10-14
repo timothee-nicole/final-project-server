@@ -31,24 +31,30 @@ app.use(
 );
 
 // Test to see if user is logged In before getting into any router.
-app.use(function (req, res, next) {
-  console.log("User in session =>", req.session.currentUser);
-  next();
-});
+// app.use(function (req, res, next) {
+//   console.log("User in session =>", req.session.currentUser);
+//   next();
+// });
 
 /**
  * Routes
  */
 
 const authRouter = require("./routes/auth");
+const amadeusRouter = require('./routes/amadeus');
+const profileRouter = require('./routes/profile')
+const tripRouter = require('./routes/trip')
 
 app.use("/api/auth", authRouter);
+app.use("/api/amadeus", amadeusRouter)
+app.use("/profile", profileRouter)
+app.use("/trip", tripRouter)
 
 // 404 Middleware
 app.use((req, res, next) => {
   const error = new Error("Ressource not found.");
   error.status = 404;
-  next(err);
+  next(error);
 });
 
 // Error handler middleware
