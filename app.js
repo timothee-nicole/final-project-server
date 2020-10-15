@@ -44,11 +44,15 @@ const authRouter = require("./routes/auth");
 const amadeusRouter = require('./routes/amadeus');
 const profileRouter = require('./routes/profile')
 const tripRouter = require('./routes/trip')
+const OpenTripRouter = require('./routes/openTripMap')
+
 
 app.use("/api/auth", authRouter);
 app.use("/api/amadeus", amadeusRouter)
 app.use("/profile", profileRouter)
 app.use("/trip", tripRouter)
+app.use("/api/openTripMap", OpenTripRouter)
+
 
 // 404 Middleware
 app.use((req, res, next) => {

@@ -3,7 +3,7 @@ const router = express.Router()
 const TripModel = require('../models/Trip')
 
 router.get("/", (req, res, next) => {
-    console.log('toto')
+    // console.log('toto')
     TripModel
         .find()
         .then((dbRes) => {
