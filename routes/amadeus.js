@@ -123,134 +123,134 @@ router.get("/activity/:activityId", (req, res, next) => {
 
 // Points Of Interest
 
-router.get("/points-of-interest/paris", (req, res, next) => {
+// router.get("/points-of-interest/paris", (req, res, next) => {
 
-    toto.then(service => {
-        service.get("/reference-data/urls/checkin-links?airline=IB").then(pp => console.log(pp)).catch(error => {
-            console.log("fooo,",error.response.data)
-        })
-    })
+//     toto.then(service => {
+//         service.get("/reference-data/urls/checkin-links?airline=IB").then(pp => console.log(pp)).catch(error => {
+//             console.log("fooo,",error.response.data)
+//         })
+//     })
 
-    amadeus
-        .referenceData
-        .locations
-        .pointsOfInterest
-        .bySquare
-        .get({
-            north: 48.91,
-            west: 2.25,
-            south: 48.80,
-            east: 2.46,
-            page: {limit: 1, offset: 2}
+//     amadeus
+//         .referenceData
+//         .locations
+//         .pointsOfInterest
+//         .bySquare
+//         .get({
+//             north: 48.91,
+//             west: 2.25,
+//             south: 48.80,
+//             east: 2.46,
+//             page: {limit: 1, offset: 2}
             
-        })
-        .then((apiRes) => {
-            res.status(200).json(apiRes.data)
-          //  console.log(apiRes)
-        })
-        .catch((apiErr)  => {
-            res.status(500).json(apiErr)
-            console.log(apiErr)
-        })
-});
+//         })
+//         .then((apiRes) => {
+//             res.status(200).json(apiRes.data)
+//           //  console.log(apiRes)
+//         })
+//         .catch((apiErr)  => {
+//             res.status(500).json(apiErr)
+//             console.log(apiErr)
+//         })
+// });
 
-router.get("/points-of-interest/london", (req, res, next) => {
-    amadeus
-        .referenceData
-        .locations
-        .pointsOfInterest
-        .bySquare
-        .get({
-            north: 51.520180,
-            west: -0.169882,
-            south: 51.484703,
-            east: -0.061048,
+// router.get("/points-of-interest/london", (req, res, next) => {
+//     amadeus
+//         .referenceData
+//         .locations
+//         .pointsOfInterest
+//         .bySquare
+//         .get({
+//             north: 51.520180,
+//             west: -0.169882,
+//             south: 51.484703,
+//             east: -0.061048,
             
-        })
-        .then((apiRes) => {
-            res.status(200).json(apiRes.data)
-            console.log(apiRes)
-        })
-        .catch((apiErr)  => {
-            res.status(500).json(apiErr)
-            console.log(apiErr)
-        })
-});
+//         })
+//         .then((apiRes) => {
+//             res.status(200).json(apiRes.data)
+//             console.log(apiRes)
+//         })
+//         .catch((apiErr)  => {
+//             res.status(500).json(apiErr)
+//             console.log(apiErr)
+//         })
+// });
 
-router.get("/points-of-interest/berlin", (req, res, next) => {
-    amadeus
-        .referenceData
-        .locations
-        .pointsOfInterest
-        .bySquare
-        .get({
-            north: 52.541755,
-            west: 13.354201,
-            south: 52.490569,
-            east: 13.457198,
+// router.get("/points-of-interest/berlin", (req, res, next) => {
+//     amadeus
+//         .referenceData
+//         .locations
+//         .pointsOfInterest
+//         .bySquare
+//         .get({
+//             north: 52.541755,
+//             west: 13.354201,
+//             south: 52.490569,
+//             east: 13.457198,
             
-        })
-        .then((apiRes) => {
-            res.status(200).json(apiRes.data)
-            console.log(apiRes)
-        })
-        .catch((apiErr)  => {
-            res.status(500).json(apiErr)
-            console.log(apiErr)
-        })
-});
+//         })
+//         .then((apiRes) => {
+//             res.status(200).json(apiRes.data)
+//             console.log(apiRes)
+//         })
+//         .catch((apiErr)  => {
+//             res.status(500).json(apiErr)
+//             console.log(apiErr)
+//         })
+// });
 
-router.get("/points-of-interest/barcelona", (req, res, next) => {
+// router.get("/points-of-interest/barcelona", (req, res, next) => {
 
-  //  amadeus.referenceData.locations.get({page: {limit: 1000}}).then(resp => res.json(resp))
+//   //  amadeus.referenceData.locations.get({page: {limit: 1000}}).then(resp => res.json(resp))
  
 
-    amadeus
-        .referenceData
-        .locations
-        .pointsOfInterest
-        .bySquare
-        .get({
-            north: 41.42,
-            west: 2.11,
-            south: 41.347463,
-            east: 2.228208,
-            page: {limit: 1},
-            // categories: ["SIGHTS"]
+//     amadeus
+//         .referenceData
+//         .locations
+//         .pointsOfInterest
+//         .bySquare
+//         .get({
+//             north: 41.42,
+//             west: 2.11,
+//             south: 41.347463,
+//             east: 2.228208,
+//             page: {limit: 1},
+//             // categories: ["SIGHTS"]
         
            
-        })
-        .then((apiRes) => {
-            res.status(200).json(apiRes.data)
-            console.log(apiRes)
-        })
-        .catch((apiErr)  => {
-            res.status(500).json(apiErr)
-            console.log(apiErr)
-        })
-});
+//         })
+//         .then((apiRes) => {
+//             res.status(200).json(apiRes.data)
+//             console.log(apiRes)
+//         })
+//         .catch((apiErr)  => {
+//             res.status(500).json(apiErr)
+//             console.log(apiErr)
+//         })
+// });
 
-router.get("/points-of-interest/:pointsOfInterestId", (req, res, next) => {
-    amadeus
-        .referenceData
-        .locations
-        .pointsOfInterest(req.params.pointsOfInterestId)
-        .bySquare
-        .get({
-            north: 41.42,
-            west: 2.11,
-            south: 41.347463,
-            east: 2.228208,
+// router.get("/points-of-interest/:pointsOfInterestId", (req, res, next) => {
+//     amadeus
+//         .referenceData
+//         .locations
+//         .pointsOfInterest(req.params.pointsOfInterestId)
+//         .bySquare
+//         .get({
+//             north: 41.42,
+//             west: 2.11,
+//             south: 41.347463,
+//             east: 2.228208,
             
-        })
-        .then((apiRes) => {
-            res.status(200).json(apiRes.data)
-            console.log(apiRes)
-        })
-        .catch((apiErr)  => {
-            res.status(500).json(apiErr)
-            console.log(apiErr)
-        })
-});
+//         })
+//         .then((apiRes) => {
+//             res.status(200).json(apiRes.data)
+//             console.log(apiRes)
+//         })
+//         .catch((apiErr)  => {
+//             res.status(500).json(apiErr)
+//             console.log(apiErr)
+//         })
+// });
 
 module.exports = router
