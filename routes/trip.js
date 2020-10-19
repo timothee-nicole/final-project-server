@@ -6,6 +6,7 @@ router.get("/", (req, res, next) => {
     // console.log('toto')
     TripModel
         .find()
+        .populate("tour")
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })
@@ -17,6 +18,7 @@ router.get("/", (req, res, next) => {
 router.get("/:id", (req, res, next) => {
     TripModel
         .findById(req.params.id)
+        .populate("tour")
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })

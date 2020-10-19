@@ -4,7 +4,8 @@ const UserModel = require('../models/User');
 
 router.get("/me", (req, res, next) => {
     UserModel
-        .findById(req.session.currentUser.id)
+        .findById(req.session.currentUser)
+        .populate("trips")
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })
@@ -25,7 +26,7 @@ router.patch("/edit", (req, res, next) => {
 })
 router.delete("/", (req, res, next) => {
     UserModel
-        .findByIdAndRemove(req.session.currentUser.id)
+        .findByIdAndRemove(req.session.currentUser)
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })
