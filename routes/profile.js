@@ -13,8 +13,9 @@ router.get("/me", (req, res, next) => {
         })
 })
 router.patch("/edit", (req, res, next) => {
+    // console.log(req.session.currentUser)
     UserModel
-        .findByIdAndUpdate(req.session.currentUser.id, req.body)
+        .findByIdAndUpdate(req.session.currentUser, req.body, {new:true})
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })

@@ -41,14 +41,16 @@ app.use(
  */
 
 const authRouter = require("./routes/auth");
-const amadeusRouter = require('./routes/amadeus');
+// const amadeusRouter = require('./routes/amadeus');
 const profileRouter = require('./routes/profile')
 const tripRouter = require('./routes/trip')
 const OpenTripRouter = require('./routes/openTripMap')
+const TourRouter = require('./routes/tour')
 
 
 app.use("/api/auth", authRouter);
-app.use("/api/amadeus", amadeusRouter)
+// app.use("/api/amadeus", amadeusRouter)
+app.use("/activity",TourRouter)
 app.use("/profile", profileRouter)
 app.use("/trip", tripRouter)
 app.use("/api/openTripMap", OpenTripRouter)

@@ -38,7 +38,7 @@ router.post("/", (req, res, next) => {
 
 router.patch("/:id", (req, res, next) => {
     TripModel
-        .findByIdAndUpdate(req.params.id, req.body)
+        .findByIdAndUpdate(req.params.id, req.body, {new: true})
         .then((dbRes) => {
             res.status(200).json(dbRes)
         })

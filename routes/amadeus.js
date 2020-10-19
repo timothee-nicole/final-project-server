@@ -48,10 +48,10 @@ router.get("/activities/paris", (req, res, next) => {
     })
     .then((apiRes) => {
        res.json(apiRes.data);
-       console.log(apiRes)
+    //    console.log(apiRes)
     })
     .catch((apiErr) => {
-        console.log(apiErr.code);
+        // console.log(apiErr.code);
         res.status(500).json(apiErr.code)
     })
 });
@@ -65,10 +65,10 @@ router.get("/activities/london", (req, res, next) => {
     })
     .then((apiRes) => {
        res.json(apiRes.data);
-       console.log(apiRes)
+    //    console.log(apiRes)
     })
     .catch((apiErr) => {
-        console.log(apiErr.code);
+        // console.log(apiErr.code);
         res.status(500).json(apiErr.code)
     })
 });
@@ -82,10 +82,10 @@ router.get("/activities/berlin", (req, res, next) => {
     })
     .then((apiRes) => {
        res.json(apiRes.data);
-       console.log(apiRes)
+    //    console.log(apiRes)
     })
     .catch((apiErr) => {
-        console.log(apiErr.code);
+        // console.log(apiErr.code);
         res.status(500).json(apiErr.code)
     })
 });
@@ -99,10 +99,10 @@ router.get("/activities/barcelona", (req, res, next) => {
     })
     .then((apiRes) => {
        res.json(apiRes.data);
-       console.log(apiRes)
+    //    console.log(apiRes)
     })
     .catch((apiErr) => {
-        console.log(apiErr.code);
+        // console.log(apiErr.code);
         res.status(500).json(apiErr.code)
     })
 });
