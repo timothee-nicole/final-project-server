@@ -16,7 +16,7 @@ router.get("/:ville", async (req, res, next) => {
         .get(ville[req.params.ville])
         .then((apiRes) => {
             res.json(apiRes.data)
-            console.log(apiRes.data)
+            // console.log(apiRes.data)
         })
         .catch((apiErr)  => {
             // res.status(500).json(apiErr)
