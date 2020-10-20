@@ -41,8 +41,8 @@ const amadeus = require("../config/amadeus")
 
 router.get("/activities/paris", (req, res, next) => {
     amadeus.shopping.activities.bySquare.get({
-        north: 48.91,
-        west: 2.25,
+        north: 48.91,   //lat 
+        west: 2.25,     //lng
         south: 48.80,
         east: 2.46,
     })
