@@ -50,9 +50,9 @@ const TourRouter = require('./routes/tour')
 
 app.use("/api/auth", authRouter);
 // app.use("/api/amadeus", amadeusRouter)
-app.use("/activity",TourRouter)
-app.use("/profile", profileRouter)
-app.use("/trip", tripRouter)
+app.use("/api/activity",TourRouter)
+app.use("/api/profile", profileRouter)
+app.use("/api/trip", tripRouter)
 app.use("/api/openTripMap", OpenTripRouter)
 
 

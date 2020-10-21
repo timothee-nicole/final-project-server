@@ -8,7 +8,7 @@ const TripSchema = new Schema({
     destination: {type: String, required: true},
     user: {type: Schema.Types.ObjectId, ref: "User"},
     tour: [{type: Schema.Types.ObjectId, ref: "Tour"}],
-    organisation: [],
+    organisation: [{tourId: {type: Schema.Types.ObjectId, ref: "Tour"}, day: Number}],
     pointsOfInterest: []
 })
 
