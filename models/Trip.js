@@ -8,7 +8,8 @@ const TripSchema = new Schema({
     destination: {type: String, required: true},
     user: {type: Schema.Types.ObjectId, ref: "User"},
     tour: [{type: Schema.Types.ObjectId, ref: "Tour"}],
-    pointsOfInterest: [String]
+    organisation: [],
+    pointsOfInterest: []
 })
 
 const TripModel = mongoose.model('Trip', TripSchema)
