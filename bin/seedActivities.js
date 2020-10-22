@@ -2028,7 +2028,8 @@ const toursAndActivities = [{
                 price: {
                 currencyCode: "EUR",
                 amount: "15.00"
-                }
+                }, 
+                destination: "london"
                 },
                 {
                 id: "248307",
